@@ -1,7 +1,7 @@
 {
-  "name": "@solid-notifications/subscription",
+  "name": "@solid-notifications/types",
   "version": "0.0.0",
-  "description": "A client for subscribing to a certain notification channel",
+  "description": "Shared typescript types for solid notification libraries",
   "keywords": [
     "solid",
     "notification"
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "node ./__tests__/subscription.test.js"
+    "test": "node ./__tests__/types.test.js"
   },
   "bugs": {
     "url": "https://github.com/o-development/solid-notification-client/issues"
