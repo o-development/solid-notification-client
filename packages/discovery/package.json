@@ -1,0 +1,31 @@
+{
+  "name": "@solid-notifications/discovery",
+  "version": "0.0.0",
+  "description": "Handles the discovery of notification capabilities on a Solid Pod",
+  "keywords": [
+    "solid",
+    "notifications"
+  ],
+  "author": "jaxoncreed <jaxoncreed@gmail.com>",
+  "homepage": "https://github.com/o-development/solid-notification-client#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-development/solid-notification-client.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "node ./__tests__/discovery-client.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/o-development/solid-notification-client/issues"
+  }
+}
