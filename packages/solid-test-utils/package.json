@@ -1,20 +1,17 @@
 {
-  "name": "@solid-notifications/types",
+  "name": "solid-test-utils",
   "version": "0.0.0",
-  "description": "Shared typescript types for solid notification libraries",
+  "description": "Utilities for testing solid, like setting up a local instance of CSS",
   "keywords": [
-    "solid",
-    "notification"
+    "solid"
   ],
   "author": "jaxoncreed <jaxoncreed@gmail.com>",
   "homepage": "https://github.com/o-development/solid-notification-client#readme",
   "license": "MIT",
   "main": "lib/index.js",
-  "publishConfig": {
-    "access": "public"
-  },
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "__tests__"
   },
   "files": [
     "lib"
@@ -28,5 +25,10 @@
   },
   "bugs": {
     "url": "https://github.com/o-development/solid-notification-client/issues"
+  },
+  "devDependencies": {
+    "@inrupt/solid-client-authn-core": "^1.14.0",
+    "@solid/community-server": "^5.1.0",
+    "node-fetch": "^3.3.1"
   }
 }

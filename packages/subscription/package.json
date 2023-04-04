@@ -14,8 +14,7 @@
     "access": "public"
   },
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib"
@@ -25,8 +24,7 @@
     "url": "git+https://github.com/o-development/solid-notification-client.git"
   },
   "scripts": {
-    "tsc": "tsc",
-    "test": "node ./__tests__/subscription.test.js"
+    "tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/o-development/solid-notification-client/issues"
