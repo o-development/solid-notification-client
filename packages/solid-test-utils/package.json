@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@inrupt/solid-client-authn-core": "^1.14.0",
-    "@solid/community-server": "^5.1.0",
+    "@solid/community-server": "^6.0.1",
     "node-fetch": "^3.3.1"
   }
 }
