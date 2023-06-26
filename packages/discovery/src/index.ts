@@ -1,1 +1,1 @@
-export * from "./getDescribedByUri";
+export * from "./client";
