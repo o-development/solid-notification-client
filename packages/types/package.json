@@ -24,6 +24,7 @@
     "url": "git+https://github.com/o-development/solid-notification-client.git"
   },
   "scripts": {
+    "build": "npm run tsc",
     "tsc": "tsc"
   },
   "bugs": {

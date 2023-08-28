@@ -24,9 +24,20 @@
     "url": "git+https://github.com/o-development/solid-notification-client.git"
   },
   "scripts": {
-    "tsc": "tsc"
+    "build": "npm run tsc",
+    "tsc": "tsc",
+    "test": "jest --coverage"
   },
   "bugs": {
     "url": "https://github.com/o-development/solid-notification-client/issues"
+  },
+  "devDependencies": {
+    "@solid-notifications/types": "^0.0.0",
+    "solid-test-utils": "^0.0.0"
+  },
+  "dependencies": {
+    "@janeirodigital/interop-utils": "^1.0.0-rc.21",
+    "@solid-notifications/discovery": "^0.0.0",
+    "n3": "^1.17.0"
   }
 }
