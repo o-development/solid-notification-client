@@ -5,24 +5,20 @@ This library implements the disovery and subscription to a Notication Channel fo
 ## Discovery
 
 A first step for having Solid Notifications is having a resource of interest to which you want to subscribe, we will call this resource the **topic**.
-To [discover](https://solidproject.org/TR/notifications-protocol#discovery) whether the topic supports a certain [**channel type**](https://solid.github.io/notifications/protocol#notification-channel-types), you can use the **DiscoveryClient**. (A list of channel types can be found [here](https://github.com/solid/notifications#notificatoin-channel-types))
+To [discover](https://solidproject.org/TR/notifications-protocol#discovery) whether the topic supports a certain [**channel type**](https://solid.github.io/notifications/protocol#notification-channel-types), you can use the **DiscoveryClient**. (A list of channel types can be found [here](https://solidproject.org/TR/#notification-channel-type-registry))
 
 Following piece of code shows how to use this class.
 
 ```javascript
-const {DiscoveryClient} = require('@solid-notifications/discovery');
+import { DiscoveryClient } from '@solid-notifications/discovery';
 
-async function main() {
-  const topic = "http://localhost:3000/topic.ttl";
-  const channelType = "http://www.w3.org/ns/solid/notifications#WebSocketChannel2023";
+const topic = "http://localhost:3000/topic.ttl";
+const channelType = "http://www.w3.org/ns/solid/notifications#WebSocketChannel2023";
 
-  const client = new DiscoveryClient(fetch);
-  const subscriptionService = await client.findService(topic, channelType);
+const client = new DiscoveryClient(fetch);
+const subscriptionService = await client.findService(topic, channelType);
 
-  console.log(subscriptionService);
-}
-
-main()
+console.log(subscriptionService);
 ```
 
 If the subscriptionService is not `null`, then `subscriptionService.id` contains the URL to which a Solid Notification Subscription can be made for the given channel type.
@@ -31,22 +27,18 @@ If the subscriptionService is not `null`, then `subscriptionService.id` contains
 
 When you know that a given **topic** resource has support for your chosen **channel type**, you follow the [Subscription flow](https://solidproject.org/TR/notifications-protocol#subscription) from the Solid Notification Protocol, which is implemented in the **SubscriptionClient** class.
 
-Following piece of code shows how to use this class.
+Following piece of ([ESM](https://nodejs.org/api/esm.html)) code shows how to use this class.
 
 ```javascript
-const {SubscriptionClient} = require('@solid-notifications/subscription');
+import { SubscriptionClient } from '@solid-notifications/subscription';
 
-async function main() {
-  const topic = "http://localhost:3000/topic.ttl";
-  const channelType = "http://www.w3.org/ns/solid/notifications#WebSocketChannel2023";
+const topic = "http://localhost:3000/topic.ttl";
+const channelType = "http://www.w3.org/ns/solid/notifications#WebSocketChannel2023";
 
-  const client = new SubscriptionClient(fetch);
-  const notificationChannel = await client.subscribe(topic, channelType);
+const client = new SubscriptionClient(fetch);
+const notificationChannel = await client.subscribe(topic, channelType);
 
-  console.log(notificationChannel);
-}
-
-main()
+console.log(notificationChannel);
 ```
 
 In this example, a subscription to a WebSocketChannel2023 has been made. 
@@ -54,7 +46,7 @@ So this variable can now be used to set up a WebSocket connection to listen to u
 For this, the `receiveFrom` property is used from the `notificationChannel` from the above sample code.
 
 ```javascript
-const { WebSocket } = require('ws');
+import { WebSocket } from 'ws';
 
 // set up a WebSocket using the notificationChannel
 const socket = new WebSocket(notificationChannel.receiveFrom)
@@ -97,7 +89,7 @@ After logging in, you can use the **Session** object to get an authenticated fet
 
 ### Notification Sender
 
-For channel types that has a [Notification Sender](https://solidproject.org/TR/notifications-protocol#NotificationSender), an extra argument (an URL) must be provided to announce to the Solid Server the `sendTo` property.
+For channel types where the [Notification Sender](https://solidproject.org/TR/notifications-protocol#NotificationSender) opens the connection e.g., [WebhookChannel2023](https://solid.github.io/notifications/webhook-channel-2023)), an extra argument (an URL) must be provided to announce to the Subscription Server the `sendTo` property.
 
 ### Setting up a solid server which supports WebSocketChannel2023 and WebhookChannel2023
 
