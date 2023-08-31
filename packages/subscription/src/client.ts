@@ -53,6 +53,11 @@ export class SubscriptionClient {
   async subscribe(topic: string, channelType: ChannelType, sendTo?: string): Promise<NotificationChannel> {
     // TODO: validate presence of sendTo based on known channel type
     const service = await this.discovery.findService(topic, channelType)
+
+    if (!service) {
+      throw Error(`Discovery did not succeed: channel type ${channelType} is not supported by the Solid Server.`)
+    }
+
     const requestedChannel = buildChannel(topic, channelType, sendTo)
     const response = await this.authnFetch(service.id, {
       method: 'POST',
