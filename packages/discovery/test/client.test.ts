@@ -57,4 +57,10 @@ describe("discovery", () => {
     const service = await client.findService(cardUri, 'https://fake.example/SomeChannel')
     expect(service).toBeNull()
   });
+
+  test("error on non-exisiting resource", async () => {
+    const client = new DiscoveryClient(stu.authFetch)
+
+    await expect(() =>client.findService("http://localhost:3001/non-existing-container/", NOTIFY.WebSocketChannel2023.value)).rejects.toThrowError()
+  })
 });

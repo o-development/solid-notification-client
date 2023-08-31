@@ -30,4 +30,8 @@ describe("subscription", () => {
     }))
   });
 
+  test("subscribe for non supported channel type",async () => {
+    const client = new SubscriptionClient(stu.authFetch)
+    await expect(() => client.subscribe(cardUri, NOTIFY.LDNChannel2023.value)).rejects.toThrowError()
+  })
 });

@@ -40,7 +40,7 @@ export class DiscoveryClient {
         'Accept': this.rdf.contentType
       }
     })
-    if (response.status <200 || response.status >300){
+    if (response.status < 200 || response.status > 300) {
       throw Error(`Failed fetching resource: ${resourceUri}`)
     }
     return this.rdf.parse(await response.text(), response.url)
@@ -48,7 +48,7 @@ export class DiscoveryClient {
 
   async discoverStorageDescription(resourceUri: string): Promise<string> {
     const response = await this.authnFetch(resourceUri, { method: 'head' })
-    if (response.status <200 || response.status >300){
+    if (response.status < 200 || response.status > 300) {
       throw Error(`Failed fetching resource: ${resourceUri}`)
     }
     return getStorageDescription(response.headers.get('Link'))
