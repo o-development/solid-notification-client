@@ -1,6 +1,6 @@
 {
   "name": "@solid-notifications/subscription",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A client for subscribing to a certain notification channel",
   "keywords": [
     "solid",
@@ -23,10 +23,10 @@
     "access": "public"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -40,12 +40,12 @@
     "url": "https://github.com/o-development/solid-notification-client/issues"
   },
   "devDependencies": {
-    "@solid-notifications/types": "^0.1.0",
-    "solid-test-utils": "^0.1.0"
+    "@solid-notifications/types": "^0.1.2",
+    "solid-test-utils": "^0.1.2"
   },
   "dependencies": {
     "@janeirodigital/interop-utils": "^1.0.0-rc.24",
-    "@solid-notifications/discovery": "^0.1.0",
-    "n3": "^1.17.0"
+    "@solid-notifications/discovery": "^0.1.2",
+    "n3": "^1.17.2"
   }
 }

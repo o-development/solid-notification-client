@@ -1,6 +1,6 @@
 {
   "name": "@solid-notifications/types",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shared typescript types for solid notification libraries",
   "keywords": [
     "solid",
@@ -23,10 +23,10 @@
     "access": "public"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",

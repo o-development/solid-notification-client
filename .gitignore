@@ -1,9 +1,8 @@
 node_modules/
 lerna-debug.log
 npm-debug.log
-packages/*/lib
+packages/*/dist
 .idea
 coverage
 .rollup.cache
-dist
 tsconfig.tsbuildinfo

@@ -1,6 +1,6 @@
 {
   "name": "solid-test-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Utilities for testing solid, like setting up a local instance of CSS",
   "keywords": [
     "solid"
@@ -8,13 +8,13 @@
   "author": "jaxoncreed <jaxoncreed@gmail.com>",
   "homepage": "https://github.com/o-development/solid-notification-client#readme",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "directories": {
-    "lib": "lib",
+    "lib": "src",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@inrupt/solid-client-authn-core": "^1.14.0",
-    "@solid/community-server": "^6.0.1",
+    "@solid/community-server": "^6.1.0",
     "node-fetch": "^3.3.1"
   }
 }
