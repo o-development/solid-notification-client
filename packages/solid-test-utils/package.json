@@ -1,6 +1,6 @@
 {
   "name": "solid-test-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utilities for testing solid, like setting up a local instance of CSS",
   "keywords": [
     "solid"

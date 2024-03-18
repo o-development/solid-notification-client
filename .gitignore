@@ -4,3 +4,6 @@ npm-debug.log
 packages/*/lib
 .idea
 coverage
+.rollup.cache
+dist
+tsconfig.tsbuildinfo

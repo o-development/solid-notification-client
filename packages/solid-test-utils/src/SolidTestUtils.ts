@@ -40,6 +40,7 @@ export class SolidTestUtils {
     );
 
     // Override global fetch with auth fetch
+    // @ts-ignore
     globalThis.fetch = jest.fn(this.authFetch);
   }
 

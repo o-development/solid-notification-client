@@ -1,6 +1,6 @@
 {
   "name": "@solid-notifications/discovery",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Handles the discovery of notification capabilities on a Solid Pod",
   "keywords": [
     "solid",
@@ -9,12 +9,14 @@
   "author": "jaxoncreed <jaxoncreed@gmail.com>",
   "homepage": "https://github.com/o-development/solid-notification-client#readme",
   "license": "MIT",
-  "main": "lib/cjs/index.js",
-  "module": "lib/mjs/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/mjs/index.js",
-      "require": "./lib/cjs/index.js"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "publishConfig": {
@@ -31,9 +33,7 @@
     "url": "git+https://github.com/o-development/solid-notification-client.git"
   },
   "scripts": {
-    "build": "npm run build:cjs && npm run build:mjs && sh fixup.sh",
-    "build:cjs": "tsc -b tsconfig-cjs.json",
-    "build:mjs": "tsc -b tsconfig-mjs.json",
+    "build": "rollup --config rollup.config.mjs",
     "test": "jest --coverage"
   },
   "bugs": {
@@ -44,7 +44,7 @@
     "solid-test-utils": "^0.1.0"
   },
   "dependencies": {
-    "@janeirodigital/interop-utils": "^1.0.0-rc.21",
+    "@janeirodigital/interop-utils": "^1.0.0-rc.24",
     "n3": "^1.17.0"
   }
 }
