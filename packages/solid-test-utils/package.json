@@ -9,6 +9,15 @@
   "homepage": "https://github.com/o-development/solid-notification-client#readme",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "directories": {
     "lib": "src",
     "test": "__tests__"
@@ -21,15 +30,14 @@
     "url": "git+https://github.com/o-development/solid-notification-client.git"
   },
   "scripts": {
-    "build": "npm run tsc",
+    "build": "rollup --config rollup.config.mjs",
     "tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/o-development/solid-notification-client/issues"
   },
   "devDependencies": {
-    "@inrupt/solid-client-authn-core": "^1.14.0",
-    "@solid/community-server": "^6.1.0",
-    "node-fetch": "^3.3.1"
+    "@inrupt/solid-client-authn-core": "^2.2.3",
+    "@solid/community-server": "^7.1.0"
   }
 }

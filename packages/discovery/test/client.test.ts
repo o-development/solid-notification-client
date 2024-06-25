@@ -1,3 +1,4 @@
+import { describe, test, expect, beforeAll, afterAll } from "vitest";
 import SolidTestUtils from "solid-test-utils";
 import { DiscoveryClient } from "../src/client";
 import { DC, NOTIFY } from "@janeirodigital/interop-utils";

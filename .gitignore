@@ -6,3 +6,4 @@ packages/*/dist
 coverage
 .rollup.cache
 tsconfig.tsbuildinfo
+.DS_Store
