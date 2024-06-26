@@ -20,7 +20,7 @@ export function createApp() {
       mainModulePath: resolveModulePath(""),
       typeChecking: false,
     },
-    config: resolveModulePath("config/default.json"),
+    config: new URL("../src/css-config.json", import.meta.url).pathname,
     shorthand: {
       port: 3_001,
       loggingLevel: "off",
