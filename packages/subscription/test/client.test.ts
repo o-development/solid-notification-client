@@ -1,3 +1,4 @@
+import { describe, test, expect, beforeAll, afterAll } from "vitest";
 import SolidTestUtils from "solid-test-utils";
 import { SubscriptionClient } from "../src/client";
 import { NOTIFY } from "@janeirodigital/interop-utils";

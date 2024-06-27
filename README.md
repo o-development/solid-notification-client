@@ -2,6 +2,8 @@
 
 This library implements the disovery and subscription to a Notication Channel following the [Solid Notifications Protocol](https://solidproject.org/TR/notifications-protocol).
 
+Besides the examples below, running examples for different channel types, are also available at https://github.com/elf-pavlik/solid-notifications-demo
+
 ## Discovery
 
 A first step for having Solid Notifications is having a resource of interest to which you want to subscribe, we will call this resource the **topic**.
@@ -57,6 +59,8 @@ socket.onmessage = (message) => console.log(message.data.toString());
 ## Development Setup
 
 This repository is managed as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [Lerna](https://lernajs.io/).
+
+The build step requires node 20 or later.
 
 It can be set up and installed by cloning this repository and installing:
 

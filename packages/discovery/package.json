@@ -34,7 +34,7 @@
   },
   "scripts": {
     "build": "rollup --config rollup.config.mjs",
-    "test": "jest --coverage"
+    "test": "NODE_ENV=vitest vitest run --coverage"
   },
   "bugs": {
     "url": "https://github.com/o-development/solid-notification-client/issues"
